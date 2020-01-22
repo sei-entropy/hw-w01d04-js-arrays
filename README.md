@@ -6,33 +6,96 @@ Please create a branch called `homework`. Then, create a file named `homework.js
 
 <ol>
   <li>Create a function that will get the sum of the numbers between 1 and n and return the answer
+  var summation(=function(int n) 
+{ 
+   let result = 0; // initialize result 
+    for (let x = 1; x <= n; x++) 
+        result += sum1(x); 
+        return result; 
+} ;
+int sum1(int x) 
+{ 
+    lat sum = 0; 
+    while (x != 0) 
+    { 
+        sum += x %10; 
+        x   = x /10; 
+    } 
+    return sum; 
+} ;
   <br>
     <code>summation(5) // should return 15 because 1+2+3+4+5=15</code>
   </li>
   <li>Create a program to get the sum of all the even numbers in a group
   <br>
+  function summationEven(n){
+    let sum = 0;
+  for(let i = 0; i <= n; i++) {
+  if(i % 2 === 0) {
+   sum = sum + i;}}
+     return sum;
+}
     <code > summationEven(5) // should return 6 because 2+4=6</code>
   </li>
     
-  <li>Create a function to get the average of a group of numbers 
+  <li>Create a function to get the average 
+
   <br>
-    <code> avg([8, 2, 2, 4]) // should return 4</code>
+}
+    <code> function average(nums) {
+    return nums.reduce((a, b) => (a + b)) / nums.length;
+    avg([8, 2, 2, 4]) // should return 4</code>
   </li>
   <li>Create a function to reverse the letters in a word
   <br>
-    <code > reverse("caterpillar") // should return "rallipretac"</code>
+
+    <code > 
+    function reverseString(str) {
+    var splitString = str.split(""); // var splitString = "caterpillar".split("");
+    var reverseArray = splitString.reverse(); 
+    var joinArray = reverseArray.join(""); 
+    return joinArray; }reverse("caterpillar") // should return "rallipretac"
+    </code>
   </li>
   <li>Create a function that takes an array of words and combines them with a dash
   <br>
-    <code > addDashes(['test1', 'test2', 'test3']) // should return "test1-test2-test3"</code>
+    <code >const addDashes = ['test1', 'test2', 'test3'];
+
+console.log(addDashess.join());
+
+console.log(addDashes.join('"'));
+ 
+    addDashes(['test1', 'test2', 'test3']) // should return "test1-test2-test3"</code>
   </li>
   <li>Function that will count up to a number and back down and return a string of the climb
   <br>
-    <code> countUpAndDown(3) // should return "1 2 3 2 1"</code>
+    <code>
+ function countdown(i)    
+{
+    var ret = "";   
+    while( i >= 0)
+    {
+        ret += i;
+        if(i > 0) {
+            ret += " "; 
+        }
+        i--;   
+    }
+    return ret;
+}
+var result = countdown(5);  
+console.log(result);
+    // countUpAndDown(3) // should return "1 2 3 2 1"</code>
   </li>
   <li>Write a function that will tell you all of the words in an array that contain the letter `a`
   <br>
-    <code > wordsWithA(['cat', 'rabbit', 'dog', 'frog']) // should return ['cat', 'rabbit']</code>
+    <code >
+     const names = ['cat', 'rabbit', 'dog', 'frog'];
+    const filterItems = (letters) => {
+        return names.filter(name => name.indexOf(letters) > -1);
+    } 
+
+    console.log(filterItems('a')) wordsWithA(['cat', 'rabbit', 'dog', 'frog']) // should return ['cat', 'rabbit']</code>
   </li>
   <li>Write a function that will tell you all of the words in an array that contain a specified letter
   <br>
@@ -40,11 +103,36 @@ Please create a branch called `homework`. Then, create a file named `homework.js
   </li>
   <li>Function that returns the longest word in sentence
   <br>
-    <code>longestWord("The cat in the house") // should return "house"</code>
+    <code>function findLongestWord(str) {
+  var strSplit = str.split(' ');
+  var longestWord = 0;
+  for(var i = 0; i < strSplit.length; i++){
+    if(strSplit[i].length > longestWord){
+	return console.log(longestWord);
+     }
+  }
+  return longestWord;
+}
+findLongestWord("The cat in the house");</code>
   </li>
   <li>Function that returns the largest even number
   <br>
-    <code>largestEvenNumber([1,2,3,10,4,7,0]) // should return "10"</code>
+    <code>function largestEvenNumber(arr) {
+  var evens = [];
+  for (var i = 0; i < arr.length; i++) {
+    if(parseInt(arr[i]) % 2 === 0) {
+      evens.push(arr[i]);
+    }
+  }
+  var biggest = 0;
+  for (var j = 0; j < nums.length; j++) {
+    if(nums[j] > biggest) {
+      biggest = nums[j];
+    }
+  }
+  return parseInt(biggest);
+}
+</code>
   </li>
 </ol>
 
