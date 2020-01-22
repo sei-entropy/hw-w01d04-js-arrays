@@ -56,13 +56,9 @@ reverseString("Ali");
 
 ////5
 
-const addDashes = function(dash) {
-  let arr = [];
-  arr.push(dash);
-  arr.join("-");
+const addDashes = function(arr) {
+  return arr.join("-");
 };
-
-let a = [1, 2, 3];
 
 ///6
 
