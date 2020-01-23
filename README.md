@@ -7,40 +7,154 @@ Please create a branch called `homework`. Then, create a file named `homework.js
 <ol>
   <li>Create a function that will get the sum of the numbers between 1 and n and return the answer
   <br>
-    <code>summation(5) // should return 15 because 1+2+3+4+5=15</code>
+    <code>
+    const summation = function (n){ 
+    let num=0;
+    for (i=1; i<=n ;i++)
+{
+     num=num+i;
+
+}
+console.log(num)
+};
+</code>
   </li>
   <li>Create a program to get the sum of all the even numbers in a group
   <br>
-    <code > summationEven(5) // should return 6 because 2+4=6</code>
+    <code > const sumEven = function (n){ 
+    let num=0;
+    for (i=1; i<=n ;i++)
+{
+    if (i%2 === 0)
+     num=num+i;
+
+}
+console.log(num)
+};
+</code>
   </li>
     
   <li>Create a function to get the average of a group of numbers 
   <br>
-    <code> avg([8, 2, 2, 4]) // should return 4</code>
+    <code> 
+    const no=[]
+no.push(8,2,2,4);
+length= no.length-1 ;
+let num=0;
+for ( i=0 ; i<= length ; i++ )
+{ 
+    num=num+no[i];
+}
+console.log(num/no.length)
+</code>
   </li>
   <li>Create a function to reverse the letters in a word
   <br>
-    <code > reverse("caterpillar") // should return "rallipretac"</code>
+    <code > let reverse= function (str) {
+// first split the litters of the word or string , then reverse , then joing the elements. 
+let splitStr = str.split("");
+let reArray = splitStr.reverse();
+let joinArray = reArray.join("");
+return joinArray;
+}
+reverse('elo');
+reverse("hello");
+</code>
+
   </li>
   <li>Create a function that takes an array of words and combines them with a dash
   <br>
-    <code > addDashes(['test1', 'test2', 'test3']) // should return "test1-test2-test3"</code>
+    <code > const addDashes = function ()
+{
+   const testArray=['test1', 'test2', 'test3'];
+    for ( let i=0 ; i<testArray.length ; i++)
+    {
+        console.log(testArray[i]+" - ");
+    }
+}
+
+addDashes();
+</code>
   </li>
   <li>Function that will count up to a number and back down and return a string of the climb
   <br>
-    <code> countUpAndDown(3) // should return "1 2 3 2 1"</code>
+    <code> 
+const Count = function (n)
+{ 
+    for ( let i=1 ; i<=n ; i++)
+    { 
+        console.log(i); 
+
+    }; 
+        n= n-1; 
+        
+    while ( n > 0)
+    { 
+        console.log(n);
+        n--;
+    }
+}
+
+</code>
   </li>
   <li>Write a function that will tell you all of the words in an array that contain the letter `a`
   <br>
-    <code > wordsWithA(['cat', 'rabbit', 'dog', 'frog']) // should return ['cat', 'rabbit']</code>
+    <code >  
+const wordsWithA = function ()
+{
+    const words=['cat', 'rabbit', 'dog', 'frog'];
+    const filterForA = (A) => {
+        return words.filter(words => words.indexOf(A) > -1);
+    }
+    console.log(filterForA('a')); 
+
+}
+
+wordsWithA();
+</code>
   </li>
   <li>Write a function that will tell you all of the words in an array that contain a specified letter
   <br>
-    <code > wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog']) // should return ['dog', 'frog']</code>
+    <code > const wordsWithLetter = function (L)
+{
+    const words=['cat', 'rabbit', 'dog', 'frog'];
+    const filterFor = (L) => {
+        return words.filter(words => words.indexOf(L) > -1);
+    }
+    console.log(filterFor(L)); 
+
+}
+
+wordsWithLetter('o');
+wordsWithLetter('g');
+
+</code>
   </li>
   <li>Function that returns the longest word in sentence
   <br>
-    <code>longestWord("The cat in the house") // should return "house"</code>
+    <code>const longestWord=function()
+ {  
+     const str=' The quick brown fox jumped over the lazy dog ';
+     const  string = str.split(' '); // splitting words
+     console.log(string);
+     let Word=0; // init
+     let found="";
+     for ( let i=0 ; i<string.length; i++)
+     { 
+         if (string[i].length > Word)
+         {
+
+         Word=string[i].length; // for passing index value
+         found = string[i]; // for passing the word 
+         }
+     };
+    
+     return found
+ };
+
+ longestWord()
+ 
+ </code>
   </li>
   <li>Function that returns the largest even number
   <br>
