@@ -53,9 +53,63 @@ var joinFunc = function(){
 //##  Up down 
 var upDown = function(){
     nums =[1,2,3];
+    var stopAt=0;
     for(var i = 0; i<nums.length;i++){
-        for (var j = 2; j >= 0; j++){
-            console.log(nums[i]);
-        } 
+        console.log(nums[i]);
+         stopAt=i;                  
+                             }
+        if(stopAt ===nums.length-1){ 
+    for(var i = nums.length-2; i>=0;i--){
+        console.log(nums[i]);
+                }
+            }
+        
+    }
+    upDown();
+
+    //## find word with a
+    const findWordsWith = function(){
+    var str = ['cat', 'rabbit', 'dog', 'frog'];
+     sl = str.length;
+    for(var i = 0; i<sl; i++){
+      if(str[i].includes('a')== true){
+        console.log(str[i]);
+        }
     }
 }
+    //## words with letter G
+    const letterGWords = function(){
+        var str = ['cat', 'rabbit', 'dog', 'frog'];
+         sl = str.length;
+        for(var i = 0; i<sl; i++){
+          if(str[i].includes('g')== true){
+            console.log(str[i]);
+            }
+        }
+    }
+    //### find longest word
+    const longestWord = function(str) {
+        var makeSplit = str.split(' ');
+        var longestWord = 0;
+          var word = '';
+        for(var i = 0; i < makeSplit.length; i++){
+          if(makeSplit[i].length > longestWord){
+          longestWord = makeSplit[i].length;
+          word = makeSplit[i];
+           }
+        }
+        return word;
+      }
+      longestWord("The cat in the house");
+    //## largest num
+    const largestEvenNumber = function(){
+        var largestNum =[1,2,3,4,5,6,7,8,9,10];
+            var largest = 0;
+            var result = 0;
+            for(var i = 0; i < largestNum.length; i++){
+                if(largestNum[i] > largest && largestNum[i]%2==0){
+                    largest = largestNum[i];
+                result = largestNum[i]; }
+            }
+        return result;
+        }
