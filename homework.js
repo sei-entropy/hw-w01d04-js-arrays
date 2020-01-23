@@ -124,26 +124,3 @@ const largestEvenNumber =function(nums){
 
 
 largestEvenNumber([1,2,3,10,4,7,0])
-
-
-
-
-const largestEvenNumber =function(nums){
-    let large =[];
-    let largeEven=0;
-for(let i=0;i<=nums.length;i++){
-if(nums[i]%2 ==0)
-{
-   console.log(large.push(nums[i]));
-   
-    for (j=0; j<=largeEven;j++){
-        if (large[j]>largeEven) {
-            let largeEven=large[i];
-        }
-    }
-}
-}
-    return largeEven;
-
-}
-largestEvenNumber([1,2,3,10,4,7,0])
