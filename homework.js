@@ -70,60 +70,41 @@ const countUpAndDown=function(num){
       
 console.log(y.join(" "));
 };
-
-//7 && 8 && 9 does not work :/ 
+ 
 
 //7
 
  const wordsWithA=function(listWord){
   const x=[];
-  for(let i =1;i<listWord.length;i++){
-      if(listWord.includes('a')){
-        x.push(i);
+  for(let i =0;i<listWord.length;i++){
+      if(listWord[i].indexOf('a')> -1){
+        x.push(listWord[i]);
       }
   } console.log(x);
-  for(let i =1;i<x.length;i++){
-   console.log(listWord[x]);
-  }}
-
-//or 
-  const wordsWithA=function(listWord){
-  for (let  i = 0; i < listWord.Length; i++)
-  {
-      for (let j = 0; j < listWord[i].Length; j++)
-      {
-          if (listWord[i].Substring(j,1) === "a")
-          {
-              Console.log(listWord[j]);
-              
-          }
-      }
   }
 
-}
 
 //8 
-const wordsWithLetter=function(leter,listOfWord){
+
+const wordsWithLetter=function(letter,listWord){
     const x=[];
-   for(let i=0;i<listOfWord.length;i++){
-    if(listOfWord.includes(leter)){
-        x.push(i);
-      }
-  } console.log(x);
-  for(let i =1;i<x.length;i++){
-   console.log(listOfWord[x]);
-  }
-};
+    for(let i =0;i<listWord.length;i++){
+        if(listWord[i].indexOf(letter)> -1){
+          x.push(listWord[i]);
+        }
+    } console.log(x);
+    };
 
 
 //9 
 
 const longestWord=function(seq){
     let longest = 0;
-    var word = null;
-    const words=seq.split("  ");
+    let word = null;
+    const words=seq.split(" ");
+    console.log(words);
     for(let i =0; i<words.length;i++){
-        if(words.length > longest){ 
+        if(words[i].length > longest){ 
             longest = words[i].length; 
             word=words[i];
           }
