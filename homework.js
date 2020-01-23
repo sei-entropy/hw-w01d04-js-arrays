@@ -67,12 +67,12 @@ const addDashes =['test1', 'test2', 'test3'] ;
 function combinesThemDash () { 
   let Dash ;
 for (i=0 ; i <= addDashes.length ; i++){
-if (addDashes[i] === addDashes.length)
+if (i === addDashes.length)
 Dash = addDashes.join("-")
 }
 return Dash  ;
 };
-console.log(combinesThemDash()); 
+console.log(combinesThemDash());
 
 or 
 
