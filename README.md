@@ -7,25 +7,64 @@ Please create a branch called `homework`. Then, create a file named `homework.js
 <ol>
   <li>Create a function that will get the sum of the numbers between 1 and n and return the answer
   <br>
-    <code>summation(5) // should return 15 because 1+2+3+4+5=15</code>
+    <code>const total = summation [1,2,3,4,5];
+function summation(a, b , c, d, e) {
+  total = (1+2+3+4+5)}
+
+summation();</code>
   </li>
+  //////////////////
+
+
   <li>Create a program to get the sum of all the even numbers in a group
   <br>
-    <code > summationEven(5) // should return 6 because 2+4=6</code>
+    <code > const total = myFunction(2, 4);
+​
+function myFunction(a, b) {
+  return a + b;
+}</code>
   </li>
-    
+
+  
+  //////////////////  
   <li>Create a function to get the average of a group of numbers 
   <br>
-    <code> avg([8, 2, 2, 4]) // should return 4</code>
+    <code> const averageNumtotal = myFunction(8 , 2, 2, 4);
+
+function myFunction(a,b,c,d) {
+  return a + b + c + d %2;
+}
+</code>
   </li>
+//////////////////////
+
+
+
   <li>Create a function to reverse the letters in a word
   <br>
-    <code > reverse("caterpillar") // should return "rallipretac"</code>
+    <code > const reverse ['c','a','t','e','r','p','i','l','l','a','r']
+
+function reverseString(string) {
+    return string;
+}
+reverseString("rallipretac");
+</code>
   </li>
+
+
+  //////////
   <li>Create a function that takes an array of words and combines them with a dash
   <br>
-    <code > addDashes(['test1', 'test2', 'test3']) // should return "test1-test2-test3"</code>
+    <code > let  addDashes = (['test1', 'test2', 'test3']);
+retunNew
+function addDashes + (-)
+  addDashes.retunNew value();
+}
+</code>
   </li>
+
+  //////////////
+
   <li>Function that will count up to a number and back down and return a string of the climb
   <br>
     <code> countUpAndDown(3) // should return "1 2 3 2 1"</code>
@@ -34,17 +73,40 @@ Please create a branch called `homework`. Then, create a file named `homework.js
   <br>
     <code > wordsWithA(['cat', 'rabbit', 'dog', 'frog']) // should return ['cat', 'rabbit']</code>
   </li>
+
+
+
+  /////////////////////////
   <li>Write a function that will tell you all of the words in an array that contain a specified letter
   <br>
-    <code > wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog']) // should return ['dog', 'frog']</code>
+    <code > let  wordsWithLetter = ["g",'cat', 'rabbit', 'dog', 'frog'];
+​
+function wordsWithLetter() {
+  wordsWithLetter.retunNew value();
+}
+</code>
   </li>
+
+  /////////////////////
   <li>Function that returns the longest word in sentence
   <br>
-    <code>longestWord("The cat in the house") // should return "house"</code>
+    <code>let  theLongestWord = ["The","Cat","in","the","house"];
+
+function theLongestWord() {
+  theLongestWord.lingth();
+}</code>
   </li>
+
+
+  ///////
   <li>Function that returns the largest even number
   <br>
-    <code>largestEvenNumber([1,2,3,10,4,7,0]) // should return "10"</code>
+    <code> let num = [1,2,3,10,4,7,0];
+
+function myFunction() {
+  num.sort();
+}
+    </code>
   </li>
 </ol>
 
