@@ -150,9 +150,16 @@ const longestWord = function (sentence) {
 //Function that returns the largest even number
 
 
+const largestEvenNumber = function(num){
 
+    let evnum = [];
 
+     for(let i = 0; i < num.length ; i++){
+         if(num[i] %2 === 0){
+          evnum.push(num[i])
 
+         } 
+     }
+      return  console.log(Math.max(...evnum))  
 
-
-
+}
