@@ -156,9 +156,7 @@ const guessLetter=function( wordLetters,guessedLetters){
  guessedLetters = ['_', '_', '_', '_'];
 
 for (var i = 0; i < wordLetters.length; i++) {
-  alert(str.charAt(i));
-}
-    
+
         if ( wordLetters ===guessedLetters) {
             return consele.log(char) }
               
