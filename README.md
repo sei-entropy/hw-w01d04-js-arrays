@@ -151,9 +151,20 @@ Create word guessing game where the user gets infinite tries to guess the word (
 
 ```js
 // start of the game
-const wordLetters     = ['G', 'O', 'A', 'T'];
-const guessedLetters  = ['_', '_', '_', '_'];
+const guessLetter=function( wordLetters,guessedLetters){
+ wordLetters  = ['G', 'O', 'A', 'T'];
+ guessedLetters = ['_', '_', '_', '_'];
 
+for (var i = 0; i < wordLetters.length; i++) {
+  alert(str.charAt(i));
+}
+    
+        if ( wordLetters ===guessedLetters) {
+            return consele.log(char) }
+              
+        else {
+          return console.log("_")}
+}
 
 // playing the game
 guessLetter('G'); // "Correct, G _ _ _"
