@@ -1,88 +1,126 @@
-//1............hm
-const numbers = [1 , 2 ,3 , 4 ,5] 
-let summation = 0;
 
-for (let i = 0; i < numbers.length; i=i+1) {
-    
-    summation = summation + numbers[i]
+const summation = function(n)
+
+{
+let sum = 0;
+
+for (let i = 1; i <= n; i=i+1) {
+
+    sum += i;//1  //3 //6 //
 }
+    return sum;
+
+}
+//summation(5);15
+
 //2.....................................................
+const summationEven = function (n)
+{
+    let summation = 0;
 
-/*const numbers = [1 , 2 ,3 , 4 ,5]
-let summation = 0;
+    for (let i = 0; i < n ; i=i+1) {
 
+        if ( i %2 ===0){
 
-for (let i = 0; i < numbers.length; i=i+1) {
+         summation += i;
 
-    if (numbers[i]%2 ==0){
-     summation = summation + numbers[i]
-
-
-    }
-    }
-console.log(i)*/
-//3.......................................
-const numbers = [1 , 2 ,3 , 4 ,5] 
-let summation = 0;
-
-for (let i = 0; i < numbers.length; i=i+1) {
-    
-    summation = summation + numbers[i]
-    summation/numbers.length};
+} return summation;
 }
+// summationEven(5)
+//6
+//3.......................................
+const avg = function (arry){
+    let summation = 0;
+    for (let i = 0; i < arry.length; i=i+1) {
+
+        summation = summation + arry[i];
+       summation= summation/arry.length;
+} return summation;
+}
+//[8, 2, 2, 4] = 4
+
+
+
 //4....................................................
 
 function reversWord(w) {
 
 var newString = "";
-for (var i = w.length - 1; i >= 0; i--) {
+for (let i = w.length - 1; i >= 0; i--) {
 newString += w[i];
 }
 return newString;
 }
+
 reversWord('caterpillar');
+
 //5..........................................
-arry =['test1', 'test2','test3']
-arry.join('-');
+
+const test  = function (arry){
+    let n = "";
+
+    for (let i = 0; i < arry.length; i=i+1) {
+       n= arry.join('-');
+    }
+    return n;}
+//test(['test1','test2','test3'])
+//"test1-test2-test3"
+
+}
 //6.....................................
 
 
 //7.................................
 
-let names1 =['cat', 'rabbit', 'dog', 'frog'];
+const names1 = function (word){
 
-let wordsWithA = (letters) => {
+    let w=[]; 
+    
+    for (let i = 0 ; i<word.length;i++)
+    {
+    if(word[i].indexOf('a') > -1){
+    w.push(word[i]);
+    }
+    }console.log(w);
+        
+    }
 
-return names1.filter (i => i.indexOf(letters) > -1);
-} 
-
-console.log(wordsWithA('a'));
-
-
+//names1(['cat', 'rabbit', 'dog', 'frog'])
+// ["cat", "rabbit"]
 //8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
-let names =['cat', 'rabbit', 'dog', 'frog'];
 
-let wordsWithLetter = (letters) => {
+const wordsWithLetter = function (w,word){
 
-return names.filter(i => i.indexOf(letters) > -1);
-} 
-
-console.log(wordsWithLetter('g'));
+    let w=[]; 
+    
+    for (let i = 0 ; i<word.length;i++)
+    {
+    if(word[i].indexOf(w) > -1){
+    w.push(word[i]);
+    }
+    }console.log(w);
+        
+    }
 
 
 //9..................................
 
 //10.......................
 
-let numbers=[1,2,3,10,4,7,0];
+const num = function(arry){
 
-let largestEvenNumber = 0;
-
-for (var i = 0; i <  numbers.length; i++) {
-
-if (numbers[i] % 2 === 0 && numbers[i] > largestEvenNumber) {
-console.log( largestEvenNumber = numbers[i])
-}
-
-}
+    let largestEvenNumber = 0;
+   
+    for (let i = 0; i <  num.length; i++) {
+   
+       if (num[i] % 2 === 0 )
+   {
+   if(num[i] > largestEvenNumber){
+       largestEvenNumber = num[i] }
+      
+    }
+    return largestEvenNumber;
+   
+   }};//num([1,2,3,10,4,7,0])
+   //0
