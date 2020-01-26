@@ -1,6 +1,6 @@
 //Q1
 
-onst  summation = function (n) {
+const  summation = function (n) {
   let output = 0;
   for( i = 1;  i <= n; i++) {
     output = output  + i;
