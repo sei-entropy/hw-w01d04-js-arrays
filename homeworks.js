@@ -1,7 +1,7 @@
 /* Create a function that will get the sum of the numbers between 1 and n and return the answer
 summation(5) // should return 15 because 1+2+3+4+5=15 */
 
-const sum = function(n)
+const summation = function(n)
 {
     let arry = [];
     let sumTotal = 0 ;
@@ -50,7 +50,7 @@ const  avg = function(arry){
 /* Create a function to reverse the letters in a word
 reverse("caterpillar") // should return "rallipretac"  */
 
-const rev = function(word) {
+const reverse = function(word) {
     let newArr = [];
     for (let i=0; i < word.length; i++){
         newArr.push(word[i])
@@ -63,7 +63,7 @@ const rev = function(word) {
  them with a dash addDashes(['test1', 'test2', 'test3']) //
   should return "test1-test2-test3" */
 
-  const comp = function(words){
+  const addDashes = function(words){
       let arr =[];
     for (i=0; i < words.length; i ++){
         arr.push(words[i]);
@@ -94,14 +94,16 @@ const climbcountUpAndDown = function(n){
 that contain the letter `a` 
 wordsWithA(['cat', 'rabbit', 'dog', 'frog']) // 
 should return ['cat', 'rabbit']  */
- const findA = function(words){
-
+ const wordsWithA = function(words){
+     let aWords=[];
       for(i=0; i < words.length ; i++){
            if(words[i].includes("a")){
-                console.log("world with letter a "+words[i])
+                // console.log("world with letter a "+words[i])
+                aWords.push(words[i])
             }
         
         } 
+        return aWords ;
  }
 
  //////////////////////////////////////
@@ -110,15 +112,17 @@ should return ['cat', 'rabbit']  */
  that contain a specified letter wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog']) // 
  should return ['dog', 'frog'] */
 
- const wordsWithLetter = function(word , words){
-    
-    let wordIn = word;
+ const wordsWithLetter = function(letter , words){
+    let wordPick=[];
+    let letterIn = letter;
     for(i=0; i < words.length ; i++){
-        if(words[i].includes(wordIn)){
-             console.log("world with letter  "+ wordIn + " is  " +words[i])
+        if(words[i].includes(letterIn)){
+            //  console.log("world with letter  "+ wordIn + " is  " +words[i])
+            wordPick.push(words[i])
          }
      
      } 
+     return  ( wordPick +" world with letter  "+ letterIn);
     
 }
 
