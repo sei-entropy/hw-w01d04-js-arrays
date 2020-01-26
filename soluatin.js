@@ -27,7 +27,7 @@ const summationEven= function(num)
 
 // solution of 3
 
-const average = function (num) {
+const avg = function (num) {
     let sum = 0;
 
     for (let i = 0; i <= num.length-1; i++) 
@@ -37,12 +37,12 @@ const average = function (num) {
 
     return sum / num.length;
 }
-average([8,2,2,4])
+avg([8,2,2,4])
 
 
 // solution of 4
 
-const reverseWord = function (word) {
+const reverse = function (word) {
     let toReverseWord = "";
 
     for (let i = word.length -1; i >= 0; i=i-1) {
@@ -51,7 +51,7 @@ const reverseWord = function (word) {
 
     return toReverseWord;
 }
-reverseWord("caterpillar")
+reverse("caterpillar")
 
 
 // solution of 5
