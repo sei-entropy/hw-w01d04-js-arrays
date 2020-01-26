@@ -24,13 +24,13 @@ result +=i;
 //3.Create a function to get the average of a group of numbers
 let number = [8,2,2,4];
 const avg = function(array){
-    let result =0;
+    let sum =0;
 
-    for(let i = 1 ; i<= array.length;i++){
-    result = result+ array[i]/i
+    for(let i = 0 ; i< array.length;i++){
+    sum += array[i];
     }
-
-return result;
+var average = sum/array.length;
+return average;
 }
 //4.Create a function to reverse the letters in a word
 
@@ -46,27 +46,30 @@ const addDashes = function(array){
 }
 
 //6.Function that will count up to a number and back down and return a string of the climb
-const countUpAndDown = function(i){
 
-    if(i<=1) {   
-    return i;}else{
-return i + " " + countUpAndDown(--i);
-    }
+const countUpAndDown = function(num){
+for(let i = 1; i<=num;i++){
+    console.log(i);
+}
+for(let j = num-1 ; j > 0 ; j--){
+    console.log(j);
+}
 }
 //7.Write a function that will tell you all of the words in an array that contain the letter `a`
 const wordsWithA = function(arr){
-
-    arr.sort((x,y) =>y-x);
-for(let i =0 ; i< arr.length;i++){
-if(arr[i] % 2 ===0){
-    return arr[i];
-
+const filtering = (theword) =>{
+    return arr.filter(item => item.indexOf(theword) > -1);
 }
+console.log(filtering('a'));
 }
-}
+    
 //8.Write a function that will tell you all of the words in an array that contain a specified letter
-const wordsWithLetter = function(){
+const wordsWithLetter = function(letter,arr){
+const filtering = (theword) => {
+    return arr.filter(item => item.indexOf(theword) > -1);
 
+}
+console.log(filtering(letter));
 }
 //9.Function that returns the longest word in sentence
 const longestWord = function(text){
