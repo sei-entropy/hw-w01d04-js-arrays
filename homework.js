@@ -1,88 +1,81 @@
 //Q1
 
-const num = function(N) {
-    let sum = 0;
-      for(let i = 1; i <= N; i=i+1){
-        sum= sum + i;
-      }
-      return sum;
-  }
-
-
-  //-----------------------
-  // Q2
-
-  const num =[1,2,3,4,5]
-  let sum= 0;
-  for (let i=0; i<num.length; i++){
-    if(num[i]%2===0) {
-    sum+=num[i];
+const summation = function(N) {
+  let sum = 0;
+    for(let i = 1; i <= N; i=i+1){
+      sum= sum + i;
     }
-  }
-  console.log(sum)
+    return sum;
+}
 
 
 //-----------------------
-  //Q3
-   const numbers = function (num) {
-    let sum= 0;
-    for (let i=0; i<num.length; i++){
-          sum+=num[i];
-    }
-  const avg= (sum/num.length);
-  return avg;
-    }
-  numbers ([8,2,2,4]);
+// Q2
+
+
+const summationEven= function(num){ 
+let sum= 0;
+for (let i=0; i<num.length; i++){
+  if(num[i]%2===0) {
+  sum+=num[i];
+  }
+}
+return (sum);
+}
+summationEven([1,2,3,4,5])
+
+
+//-----------------------
+//Q3
+ const avg = function (num) {
+  let sum= 0;
+  for (let i=0; i<num.length; i++){
+        sum+=num[i];
+  }
+const avgNumber= (sum/num.length);
+return avgNumber;
+  }
+avg([8,2,2,4]);
 
 
 //-----------------------
 //Q4
 
 
-const reverseString= function(str){
- return str.split("").reverse().join("");
+const reverse = function(str){
+return str.split("").reverse().join("");
 }
-reverseString("caterpillar")
+reverse("caterpillar")
+
 
 //-----------------------
 //Q5
 
 const addDashes= function (test){
-  let dashWord= test.join("-");
-  
-  return dashWord;
-  }
-  addDashes(['test1', 'test2', 'test3']); 
+let dashWord= test.join("-");
 
-//-----------------------
-
-
-const findLongestWord= function(str) {
-  let strSplit = str.split(' ');
-  var longestWord = 0;
-  for(let i = 0; i < strSplit.length; i++){
-    if(strSplit[i].length > longestWord){
-	longestWord = strSplit[i].length;
-     }
-  }
-  return longestWord;
+return dashWord;
 }
+addDashes(['test1', 'test2', 'test3']); 
+
+
+
 
 //-----------------------
 //Q6
 
 const countUpAndDown= function(num) {
 
-  let arr=[];
+let arr=[];
 for (let i=1 ; i<=num; i++) {
- arr.push(i);
+arr.push(i);
 }
 
 for (let j=num-1 ; j>0; j--) {
-  arr.push(j);
-   
-  }
-  return arr.join();
+arr.push(j);
+ 
+}
+return arr.join("");
 }
 countUpAndDown(3);
 
@@ -91,9 +84,9 @@ countUpAndDown(3);
 //Q7
 
 const wordsWithA= function (arr) {
-  const arrWithA= arr.filter(function(value) {
-    return value.match("a");
-  }
+const arrWithA= arr.filter(function(value) {
+  return value.match("a");
+}
 );
 return arrWithA;
 }
@@ -104,48 +97,71 @@ wordsWithA(['cat', 'rabbit', 'dog', 'frog']);
 //-----------------------
 //Q8
 
-const findwordsWithLetter= function (arr) {
-  const wordsWithLetter= arr.filter(function(value) {
-    return value.match("g");
-  }
-  );
-    return wordsWithLetter;
-  }
-  findwordsWithLetter(['cat', 'rabbit', 'dog', 'frog']);
-  
-  
-  
- 
+const findwordsWithLetter= function (letter, arr) {
+const wordsWithLetter= arr.filter(function(value) {
+  return value.match(letter);
+}
+);
+  return wordsWithLetter;
+}
+findwordsWithLetter('g',['cat', 'rabbit', 'dog', 'frog']);
+
+
+
+
 
 //-----------------------
 //Q9
 const findLongestWord = function (str) {
-  const  longestWord = str.split(' ');
-  const sortedArray= longestWord.sort(function
-    (strA, strB)
- {
+const  longestWord = str.split(' ');
+const sortedArray= longestWord.sort(function
+  (strA, strB)
+{
 
-      return strB.length - strA.length ;
-    }
-  );
-   
-  return sortedArray[0];
- }
- console.log(findLongestWord("The cat in the house"));
+    return strB.length - strA.length ;
+  }
+);
+ 
+return sortedArray[0];
+}
+console.log(findLongestWord("The cat in the house"));
 
 
 //-----------------------
 //Q10
-const findlargestEvenNumber = function (str) {
-  
-  const sortedArray= str.sort(function
-    (strA, strB)
- {
 
-      return strB - strA ;
+const findlargestEvenNumber = function (str) {
+  let largestEvenNumber = 0;
+  for(let i = 0; i < str.length; i++) {
+    if(str[i]%2===0 && (str[i]> largestEvenNumber)){
+    
+     largestEvenNumber= str[i]}
     }
-  );
-   
-  return sortedArray[0];
- }
- console.log(findlargestEvenNumber([1,2,3,10,4,7,0]));
+return largestEvenNumber;
+}
+findlargestEvenNumber([1,2,3,10,4,7,0,15]);
+
+
+
+
+
+
+
+
+
+
+// not a soultin just for a future use 
+//how to use sort q10
+const findlargestEvenNumber = function (str) {
+
+const sortedArray= str.sort(function
+  (strA, strB)
+{
+ 
+    return strB - strA ;
+  }
+);
+ 
+return sortedArray[0];
+}
+console.log(findlargestEvenNumber([1,2,3,10,4,7,0]));
