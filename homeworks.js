@@ -95,19 +95,13 @@ that contain the letter `a`
 wordsWithA(['cat', 'rabbit', 'dog', 'frog']) // 
 should return ['cat', 'rabbit']  */
  const findA = function(words){
-    let arr =[];
-    let arr2 = [];
-   
-    for(i=0; i <= words.length ; i++){
-     arr.push(words[i]);
-     for (i=0 ; i <= arr.length; i++){
-//      console.log('this is '+ arr2[i])
-        if (arr[i] === "a")
-          { arr2.push(words[i])
-          }
+
+      for(i=0; i < words.length ; i++){
+           if(words[i].includes("a")){
+                console.log("world with letter a "+words[i])
+            }
+        
         } 
-    }
-    return arr2;
  }
 
  //////////////////////////////////////
@@ -116,19 +110,16 @@ should return ['cat', 'rabbit']  */
  that contain a specified letter wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog']) // 
  should return ['dog', 'frog'] */
 
- const wordG = function(words){
-    let arr =[];
-    let arr2 = [];
-   
-    for(i=0; i <= words.length ; i++){
-      arr = words[i].split(' ');
-      for (J=0 ; J <= arr.length; J++){
-      if (arr[i] === "a")
-          { arr.push(words[i])
-          }
-    } 
-    }
-    return arr;
+ const wordsWithLetter = function(word , words){
+    
+    let wordIn = word;
+    for(i=0; i < words.length ; i++){
+        if(words[i].includes(wordIn)){
+             console.log("world with letter  "+ wordIn + " is  " +words[i])
+         }
+     
+     } 
+    
 }
 
 /////////////////////////////
@@ -139,13 +130,16 @@ longestWord("The cat in the house") // should return "house" */
 const longestWord = function(w){
    let str = [];
    let longWord = 0;
-   str = w.split(' ');
+   let bigWord = " ";
+
+   str = w.split(' ');    // divide the words 
    for (let i=0; i < str.length; i++){
-       if (str[i].length > longWord){
-        longWord = str[i]
-       }
-   }
-   return longWord ;
+       if (str[i].length > longWord)
+        {   longWord = str[i].length;
+           bigWord = str[i];
+        }
+    }
+return bigWord ;
 }
 
 /////////////////////////////
