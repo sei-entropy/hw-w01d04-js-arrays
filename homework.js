@@ -1,6 +1,6 @@
 // 1
 const summation = function (num) {
-    let sum;
+    let sum =0;
     for (let i = 0; i <= num; i++) {
         sum += i;
     }
@@ -9,7 +9,7 @@ const summation = function (num) {
 
 // 2
 const summation = function (num) {
-    let sum;
+    let sum=0;
     for (let i = 0; i <= num; i++) {
         if (i % 2 === 0) {
             sum += i;
@@ -20,12 +20,12 @@ const summation = function (num) {
 }
 
 // 3
-const avg = function (numsArray) {
+const avg = function (numberArray) {
     let total = 0;
-    for (let i = 0; i < numsArray.length; i++) {
-        total += numsArray[i];
+    for (let i = 0; i < numberArray.length; i++) {
+        total += numberArray[i];
     }
-    return total / numsArray.length;
+    return total / numberArray.length;
 }
 
 // 4
@@ -42,7 +42,7 @@ const addDashes = function (wordsArray) {
 // 6
 const countUpAndDown = function (num) { 
     let result = []
-    for (let i = 1; i <= num; i++) {
+    for (let i = 1; i < num; i++) {
         result.push(i);
     }
     for (let i = num; i >= 1; i--) {
