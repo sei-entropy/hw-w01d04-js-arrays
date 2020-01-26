@@ -13,20 +13,16 @@ const summation = function (num) {
 
 // solution of 2
 
-const summationEven = function (num) 
-{
-  let sum = 0;
-if (num % 2 ==0)
-{
-for (let i = 1; i <= num; i++) 
-{
-        sum = sum+i;
-}
-
-    return sum;
-} 
-};
-summationEven(8)
+const summationEven= function(num)
+  {
+    let sum = 0;
+    for(let i=num; i>1 ;i--)
+    {   
+      if(i%2===0)
+         sum = sum+i };
+       return sum;
+    };
+    summationEven(8)
 
 
 // solution of 3
@@ -47,7 +43,7 @@ average([8,2,2,4])
 // solution of 4
 
 const reverseWord = function (word) {
-    let toReverseWord = " ";
+    let toReverseWord = "";
 
     for (let i = word.length -1; i >= 0; i=i-1) {
         toReverseWord =  toReverseWord + word [i];
@@ -61,7 +57,7 @@ reverseWord("caterpillar")
 // solution of 5
 
 const addDashes = function (word) {
-    let output = " ";
+    let output = "";
 
     for (let i = 0; i <= word.length -1 ; i++) {
         output +=  word[i];
