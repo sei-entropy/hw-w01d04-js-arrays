@@ -1,10 +1,9 @@
 //summation off 5 function
-const summation = function(){
+const summation = function(sum){
     
     
-    const i=0;
-    const sum=0;
-    while (i < 6 )
+    let i=0;
+    while (i < 5 )
     {
     sum += i;
     i++;
