@@ -8,6 +8,7 @@ Please create a branch called `homework`. Then, create a file named `homework.js
   <li>Create a function that will get the sum of the numbers between 1 and n and return the answer
   <br>
     <code>
+
     const summation = function (n){ 
     let num=0;
     for (i=1; i<=n ;i++)
@@ -37,7 +38,8 @@ console.log(num)
   <li>Create a function to get the average of a group of numbers 
   <br>
     <code> 
-    const no=[]
+    const avreage = function () {
+const no=[]
 no.push(8,2,2,4);
 length= no.length-1 ;
 let num=0;
@@ -46,6 +48,8 @@ for ( i=0 ; i<= length ; i++ )
     num=num+no[i];
 }
 console.log(num/no.length)
+}
+
 </code>
   </li>
   <li>Create a function to reverse the letters in a word
@@ -64,13 +68,11 @@ reverse("hello");
   </li>
   <li>Create a function that takes an array of words and combines them with a dash
   <br>
-    <code > const addDashes = function ()
+    <code > 
+    const addDashes = function ()
 {
    const testArray=['test1', 'test2', 'test3'];
-    for ( let i=0 ; i<testArray.length ; i++)
-    {
-        console.log(testArray[i]+" - ");
-    }
+   console.log(testArray.join('-'));
 }
 
 addDashes();
@@ -79,7 +81,7 @@ addDashes();
   <li>Function that will count up to a number and back down and return a string of the climb
   <br>
     <code> 
-const Count = function (n)
+const count = function (n)
 { 
     for ( let i=1 ; i<=n ; i++)
     { 
@@ -115,18 +117,20 @@ wordsWithA();
   </li>
   <li>Write a function that will tell you all of the words in an array that contain a specified letter
   <br>
-    <code > const wordsWithLetter = function (L)
+    <code > 
+    
+    const wordsWithLetter = function (L,words)
 {
-    const words=['cat', 'rabbit', 'dog', 'frog'];
+ 
     const filterFor = (L) => {
         return words.filter(words => words.indexOf(L) > -1);
     }
     console.log(filterFor(L)); 
 
 }
-
-wordsWithLetter('o');
-wordsWithLetter('g');
+wordsWithLetter("c", ['cat', 'rabbit', 'dog', 'frog'])
+wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog'])
+wordsWithLetter("r", ['cat', 'fox', 'dog', 'frog'])
 
 </code>
   </li>
@@ -158,9 +162,26 @@ wordsWithLetter('g');
   </li>
   <li>Function that returns the largest even number
   <br>
-    <code>largestEvenNumber([1,2,3,10,4,7,0]) // should return "10"</code>
+    <code>
+    const largestNumber = function (nums) {
+let largest=0;
+for (let i = 0; i < nums.length; i++) {
+    if(nums[i] > largest) {
+      largest = nums[i];
+    }
+}return largest;
+
+}
+
+largestNumber([0,2,8,4,7,66])
+largestNumber([10,1,48,84,70,66])
+largestNumber([0,2,9,4,7])
+
+
+</code>
   </li>
 </ol>
+
 
 ## Extra Practice
 
