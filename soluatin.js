@@ -8,6 +8,7 @@ const summation = function (num) {
 
     return sum;
 }
+
  summation(5)
 
 
@@ -22,6 +23,7 @@ const summationEven= function(num)
          sum = sum+i };
        return sum;
     };
+
     summationEven(8)
 
 
@@ -37,6 +39,7 @@ const avg = function (num) {
 
     return sum / num.length;
 }
+
 avg([8,2,2,4])
 
 
@@ -51,6 +54,7 @@ const reverse = function (word) {
 
     return toReverseWord;
 }
+
 reverse("caterpillar")
 
 
@@ -67,6 +71,108 @@ const addDashes = function (word) {
 
     return output;
 }
+
 addDashes(['test 1', 'test 2', 'test3'])
 
+
+// solution of 6
+
+const countUpAndDown = function (num) {
+   let upAndDown = "";
+
+    for (let i = 1; i < num; i++) {
+       upAndDown += i.toString() + " ";
+    }
+    for (let i = num; i >= 1; i--) {
+        upAndDown += i.toString();
+        if (i !== 1)
+            upAndDown += " ";
+    }
+
+    return upAndDown ;
+}
+
+countUpAndDown(3);
+
+// solution of 7
+
+const wordsWithA = function (word) 
+{
+    let array = [];
+
+    for (let i = 0; i < word.length; i++) 
+    {
+        for (let j = 0; j < word[i].length; j++)
+        {
+            if (word[i][j] === 'a')
+            {
+                array.push(word[i]);
+            }
+        }
+    }
+
+    return array;
+}
+
+wordsWithA(['cat', 'rabbit', 'dog', 'frog']) 
+
+
+// soluation of 8
+const wordsWithLetter = function (letter, word) 
+{
+    let array = [];
+
+    for (let i = 0; i < word.length; i++) 
+    {
+        for (let j = 0; j < word[i].length; j++) 
+        {
+            if (word[i][j] === letter) {
+                array.push(word[i]);
+            }
+        }
+    }
+
+    return array ;
+}
+
+wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog'])
+
+
+// soluation of 9
+const longestWord = function (sentence) 
+{
+  
+    let longestWord = "";
+   let word = sentence.split(" ");
+
+    for (let i = 0; i < word.length; i++) 
+    {
+        if (word[i].length > longestWord.length) {
+            longestWord = word[i];
+        }
+    }
+
+    return longestWord;
+}
+
+longestWord("The cat in the house") 
+
+
+//soluation of 10 
+const largestEvenNumber = function(num) 
+{
+    let largestEven = 0;
+    for(let i = 0; i < num.length; i++)
+    {
+        if(num[i] % 2 === 0){
+            if(num[i] > largestEven)
+            {
+                largestEven = num[i]
+            }           
+        }
+    }
+    return largestEven;
+}
+
+largestEvenNumber([1,2,3,10,4,7,0])
 
