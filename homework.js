@@ -1,6 +1,6 @@
 //Q1
 
-onst  summation = function (n) {
+const  summation = function (n) {
   let output = 0;
   for( i = 1;  i <= n; i++) {
     output = output  + i;
@@ -8,77 +8,81 @@ onst  summation = function (n) {
   return output ;
 };
 
-let n = 5 ;
-console.log('Sum of numebers from 1 to '+ n +' is '+ summation(n));
+console.log('Sum of numebers from 1 to '+ 5 +' is '+ summation(5));
 
 
 //Q2
 
-const summationEven = function (n){
-  let sum = 0 ;
+
+const largestEven = function (arr) {
+  const evens = [];
+
+  for (i =1; i < arr; i++) {
+    if(i % 2 === 0) {
+      evens.push(i);
+    }
+
+  }
  
- for ( i=0; i <=n; i=i+2) {
-   sum +=1
-   }
- return sum ;
+ function myFunc(total, num) {
+  return total + num;
+}
+  console.log(evens.reduce(myFunc))
  
- };
-  let n = 6
- console.log(summationEven(n));
+  }    
+  console.log(largestEven(5));
 
 
  //Q3
 
- const avg=[8, 4, 2, 4];
+ 
+const getAvg = function (array) {
+let count =0;
 
-const getAvg = function () {
-
-for (i = 0 ; i< avg.length ;i++) 
+for (i = 0 ; i < array.length ; i++) 
 {
- if (avg[i] === avg.length ){
-   
- avg= avg[i] + avg[i]; 
- }
-return avg[i] / avg.length ;
-}
-};
 
-console.log(getAvg())
+count  += array[i] 
+ }
+return  Math.floor(count / array.length)
+}
+
+console.log(getAvg ([8, 4, 2, 4]))
 
 //Q4 
 
-function reverseString(str) {
-var splitString = str.split("")
+function reverse (str) {
+
+const splitString = str.split("")
 
 
-var reverseArray = splitString.reverse(); 
+const reverse = splitString.reverse(); 
 
 
-var joinArray = reverseArray.join("");
+const joinArray = reverse.join("");
 
 return joinArray;
 }
 
-console.log(reverseString("caterpillar"));
+console.log(reverse('caterpillar'))
 
 //Q5
 
 const addDashes =['test1', 'test2', 'test3'] ;
 function combinesThemDash () { 
-  let Dash ;
+  let dash ;
 for (i=0 ; i <= addDashes.length ; i++){
 if (i === addDashes.length)
-Dash = addDashes.join("-")
+dash = addDashes.join("-")
 }
-return Dash  ;
+return dash  ;
 };
 console.log(combinesThemDash());
 
 or 
 
-const addDashes= function(Dasge){
-
-return Dasge.join("-");
+const addDashes= function(dash){
+return dash.join("-");
 
 }
 
@@ -88,42 +92,41 @@ console.log(addDashes(['test1', 'test2', 'test3']));
 
 //Q6
 
-function printNumbers(args) {
-  let input = args[0];
-  for (var i = 1; i <= input; i++) {
-    console.log(i);
-    //return i;
+const printNumbers = function (num) {
+  const count = []
+  for (i=1 ; i<=num ; i++){
+   count.push(i)
   }
-  for (var j = input-1; j <= input; j--) {
-    console.log(j);
-    if (j<=1){
-      break;
-    }
+  for (j=num-1 ; j > 0 ; j--){
+   count.push(j)
+  
   }
+return count.join(' ')
 }
-console.log(printNumbers("3"));
+
+printNumbers(3)
+
+
 
 //Q7
 
-const LetterA = ['cat', 'rabbit', 'dog', 'frog']
-const FindA = 'a';
-function find(LetterA,FindA){
-FindA = FindA.split('');
+function find(LetterA){
+  let FindA = 'a';
+  FindA = FindA.split('');
 return LetterA.filter(function(LetterA){
 return FindA.every(function(char){
 return LetterA.includes(char);
 });
 });
 }
-const output = find(LetterA,FindA);
-console.log(output);
+
+console.log(find(['cat', 'rabbit', 'dog', 'frog']));
 
 
 //Q8
 
-const wordsWithLetter = ['cat', 'rabbit', 'dog', 'frog']
-const Findg = 'g';
-function find(wordsWithLetter,Findg){
+function find(wordsWithLetter){
+  let Findg = 'g';
 Findg = Findg.split('');
 return wordsWithLetter.filter(function(wordsWithLetter){
 return Findg.every(function(char){
@@ -131,8 +134,8 @@ return wordsWithLetter.includes(char);
 });
 });
 }
-const output = find(wordsWithLetter,Findg);
-console.log(output);
+console.log(find(['cat', 'rabbit', 'dog', 'frog']));
+
 
 //Q9
 
@@ -154,27 +157,18 @@ console.log(longestWord("The cat in the house"));
 
 //Q10
 
-var nums = [1,2,3,10,4,7,0];
+const largestEven = function (arr) {
+  const evens = [];
+  let biggest = evens;
 
-function largestEven(arr) {
-var evens = [];
-for (var i = 0; i < arr.length; i++) {
-  if(parseInt(arr[i]) % 2 === 0) {
-    evens.push(arr[i]);
+  for (i = 0; i < arr.length; i++) {
+    if(arr[i] % 2 === 0) {
+      evens.push(arr[i]);
+    }
   }
-}
-var biggest = 0;
-for (var j = 0; j < nums.length; j++) {
-  if(nums[j] > biggest) {
-    biggest = nums[j];
-  }
-}
-return parseInt(biggest);
-}
-
-largestEven(nums)
-console.log(largestEven(""));
-
+  return Math.max(...biggest)
+  }    
+  console.log(largestEven([1,2,3,10,4,7,0]));
 
 
 // Extra 
@@ -201,7 +195,8 @@ function guessLetter(letter) {
           console.log('YOU WON!');
       } 
  
-guessLetter('T'); } else {
+    } 
+    else {
       console.log('Oh noes, thats not right!');
   }
 }
