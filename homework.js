@@ -61,7 +61,7 @@ const countUpAndDown = function (n) {
     for (let i = 1; i <= n ; i++)
         str += i + ' ';
 
-    for (let j = n; j >= 1 ; j--)
+    for (let j = n-1; j >= 1 ; j--)
         str += j + ' ';
 
     return str;
@@ -122,7 +122,7 @@ const largestEvenNumber = function (arr) {
           j++;
         }
       }
-      num = Math.max(testArr);
+      num = Math.max.apply(null, testArr);
           return num;
 
 };
