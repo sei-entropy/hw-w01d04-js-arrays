@@ -22,8 +22,8 @@ summation(5)
 
 // 3
     function avg(number){
-        var sum = 0;
-         for(var i in number) {
+        let sum = 0;
+         for(let i in number) {
           sum += number[i];
         }
         let numbersCnt = number.length;
