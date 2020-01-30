@@ -1,17 +1,17 @@
-//1 
-let arr = [1, 2, 3, 4, 5];
-function sum(arr) {
-    var s = 0;
-    for (i = 0; i < arr.length; i++) {
-       s += arr[i];
+//1 D
+function summation(N) {
+  var total = 0;
+    for(var i = 1; i <= N; i++){
+      total += i;
     }
-    return s
-  }
+    return total;
+}
+//call by summation(5)
   
   //2
 let numStr = [1, 2, 3, 4, 5];
 
-function sumEvens(numStr){
+function summationEven(numStr){
   let sum = 0;
   for (let i = 0; i < numStr.length; i++) {
     if (numStr[i] % 2 === 0) {
@@ -21,11 +21,11 @@ function sumEvens(numStr){
   return sum;
 }
  
-console.log(sumEvens(numStr));
+console.log(summationEven(numStr));
  
 //3 
 let arr1 = [8, 2, 2, 4]; 
-function theAverage1(arr1){
+function Avg(arr1){
 var total = 0;
 for(var i = 0; i < arr1.length; i++) {
     total += arr1[i];
@@ -34,75 +34,84 @@ var avg = total / arr1.length;
 return avg }
 
 //4 
-function reverseString(str) {
+function reverse(str) {
     var newString = "";
     for (var i = str.length - 1; i >= 0; i--) {
         newString += str[i];
     }
     return newString;
 }
-reverseString('caterpillar');
+reverse('caterpillar');
 
-//5
-const elements1 = ['test1', 'test2', 'test3'];
-function addDashes(elements1){
-console.log(elements1.join('-'));
+//5 
+const elements = ['test1', 'test2', 'test3'];
+function addDashes(elements){
+return elements1.join('-');
 }
-//6
-function countUpAndDown(i)
-
+//6 *-*
+function countUpAndDownevm()
 { 
-for(var i=3 ; i>0 ; i--) {
-  console.log(i);
-    }
+var str = "";
+
+ for (var i=1 ; i<=3 ; i++) {
+str+=i;
 }
-//7
-var words5 = ['cat', 'rabbit', 'dog', 'frog'];
+for(var i=2 ; i>0 ; i--) {
+  str+=i;
+
+var arr = str.split('');
+return arr;
+}}
+
+
+
+//7 D
+var myList = ['cat', 'rabbit', 'dog', 'frog'];
 
 var str = 'a';
 
-function find(words5, str) {
+function wordsWhithA(myList, str) {
   str = str.split('');
-  return words5.filter(function(word5) {
+  return myList.filter(function(myList) {
     return str.every(function(char) {
-      return word5.includes(char);
+      return myList.includes(char);
     });
   });
 }
 
-const output5 = find(words5, str); 
-console.log(output5);
+const result = wordsWhithA(myList, str); 
+console.log(result);
 
-//8
-var words75 = ['cat', 'rabbit', 'dog', 'frog'];
+//8 -----D
+var mylist = ['cat', 'rabbit', 'dog', 'frog'];
 
-var str7 = 'g';
+var s = 'g';
 
-function find(words75, str7) {
-  str = str7.split('');
-  return words75.filter(function(word75) {
+function wordWithLetter(mylist, s) {
+  str = s.split('');
+  return mylist.filter(function(mylist) {
     return str.every(function(char) {
-      return word75.includes(char);
+      return mylist.includes(char);
     });
   });
 }
 
-const output59 = find(words75, str7); 
-console.log(output59);
+const theResult1 = wordWithLetter(mylist, s); 
+console.log(theResult1);
 
 //9
-function longestWordf(str) {
+function longestWord(str) {
     const stringArray = str.split(" ");
-    const longestWord1 = stringArray.reduce((a, b) => {
+    const longestWord = stringArray.reduce((a, b) => {
       if(b.length > a.length) {
         return b;
       } else {
         return a;
       }
     });
-    return longestWord1;
+    return longestWord;
   }
-  longestWordf("The cat in the house");
+  longestWord("The cat in the house");
 
 //10 
 function largestEvenNumber(arra) {
