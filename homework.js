@@ -14,29 +14,22 @@ console.log('Sum of numebers from 1 to '+ 5 +' is '+ summation(5));
 //Q2
 
 
-const largestEven = function (arr) {
-  const evens = [];
-
-  for (i =1; i < arr; i++) {
-    if(i % 2 === 0) {
-      evens.push(i);
-    }
-
-  }
- 
- function myFunc(total, num) {
-  return total + num;
+const summationEven = function (num) {
+  let sum=0;
+for (let i = 0; i <= num; i++) {
+      if (i % 2 === 0) {
+          sum += i;
+      }
+   }
+  return console.log(sum);
 }
-  console.log(evens.reduce(myFunc))
- 
-  }    
-  console.log(largestEven(5));
+summationEven(5);
 
 
  //Q3
 
  
-const getAvg = function (array) {
+const avg = function (array) {
 let count =0;
 
 for (i = 0 ; i < array.length ; i++) 
@@ -47,7 +40,7 @@ count  += array[i]
 return  Math.floor(count / array.length)
 }
 
-console.log(getAvg ([8, 4, 2, 4]))
+console.log(avg ([8, 4, 2, 4]))
 
 //Q4 
 
@@ -67,19 +60,6 @@ return joinArray;
 console.log(reverse('caterpillar'))
 
 //Q5
-
-const addDashes =['test1', 'test2', 'test3'] ;
-function combinesThemDash () { 
-  let dash ;
-for (i=0 ; i <= addDashes.length ; i++){
-if (i === addDashes.length)
-dash = addDashes.join("-")
-}
-return dash  ;
-};
-console.log(combinesThemDash());
-
-or 
 
 const addDashes= function(dash){
 return dash.join("-");
@@ -125,16 +105,19 @@ console.log(find(['cat', 'rabbit', 'dog', 'frog']));
 
 //Q8
 
-function find(wordsWithLetter){
-  let Findg = 'g';
-Findg = Findg.split('');
-return wordsWithLetter.filter(function(wordsWithLetter){
+
+function find(wordsWithLetter,Findg){
+  Findg = 'g';
+  Findg = Findg.split('');
+  return wordsWithLetter.filter(function(wordsWithLetter){
 return Findg.every(function(char){
-return wordsWithLetter.includes(char);
+  return wordsWithLetter.includes(char);
 });
-});
+  });
 }
-console.log(find(['cat', 'rabbit', 'dog', 'frog']));
+const output = find(['cat', 'rabbit', 'dog', 'frog']);
+console.log(output);
+
 
 
 //Q9
