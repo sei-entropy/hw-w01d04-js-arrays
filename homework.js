@@ -8,7 +8,7 @@ const summation = function (num) {
 }
 
 // 2
-const summation = function (num) {
+const summationEven = function (num) {
     let sum=0;
     for (let i = 0; i <= num; i++) {
         if (i % 2 === 0) {
