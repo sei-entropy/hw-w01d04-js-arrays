@@ -3,7 +3,7 @@
   summation(5) should return 15 because 1+2+3+4+5=15
 */
 const summation = function (num) {
-    let sum;
+    let sum = 0;
     for (let i = 0; i <= num; i++) {
         sum += i;
     }
@@ -15,7 +15,7 @@ const summation = function (num) {
   summationEven(5)  should return 6 because 2+4=6
 */
 const summationEven = function (num) {
-    let sum;
+    let sum = 0;
     for (let i = 0; i <= num; i++) {
         if (i % 2 === 0) {
             sum += i;
@@ -63,7 +63,7 @@ const countUpAndDown = function (num) {
     for (let i = 1; i <= num; i++) {
         result.push(i);
     }
-    for (let i = num; i >= 1; i--) {
+    for (let i = num - 1; i >= 1; i--) {
         result.push(i);
     }
     return result.join(" ");
@@ -129,34 +129,36 @@ const largestEvenNumber = function (numbersArray) {
 /*
   Extra Practice
 */
-const wordLetters = ['G', 'O', 'A', 'T'];
-const guessedLetters = ['_', '_', '_', '_'];
+const wordLetters = ["G", "O", "A", "T"];
+const guessedLetters = ["_", "_", "_", "_"];
 
-const guessLetter = function (letter = '') {
+const guessLetter = function (letter = "") {
     letter = letter.toUpperCase();
-
+    let correctGuess = false;
+    let tryAgain = true;
     for (let i = 0; i < wordLetters.length; i++) {
+
         if (wordLetters[i] == letter) {
             guessedLetters[i] = letter;
             correctGuess = true;
         }
-        if (guessedLetters[i] == '_') {
-            tryAgain = true;
+        if (guessedLetters[i] == "_") {
+            tryAgain = false;
         }
     }
-    if (correctGuess) {
-        console.log('Correct, ' + guessedLetters.join(''));
-        if (!tryAgain) {
-            console.log('You Win, G O A T');
-        }
+    if (correctGuess && guessedLetters[3] == "_") {
+        console.log("Correct! " + guessedLetters.join(""));
+    } else if (tryAgain) {
+        console.log("You Win! " + guessedLetters.join(""));
     } else {
-        console.log('Incorrect, ' + guessedLetters.join(''));
+        console.log("Incorrect! " + guessedLetters.join(""));
     }
 }
+
 // playing the game
-guessLetter('G'); // "Correct, G _ _ _"
-guessLetter('I'); // "Incorrect, G _ _ _"
-guessLetter('O'); // "Correct, G O _ _"
-guessLetter('A'); // "Correct, G O A _"
-guessLetter('L'); // "Incorrect, G O A _"
-guessLetter('T'); // "You Win, G O A T"
+guessLetter("G"); // "Correct, G _ _ _"
+guessLetter("I"); // "Incorrect, G _ _ _"
+guessLetter("O"); // "Correct, G O _ _"
+guessLetter("A"); // "Correct, G O A _"
+guessLetter("L"); // "Incorrect, G O A _"
+guessLetter("T"); // "You Win, G O A T"
