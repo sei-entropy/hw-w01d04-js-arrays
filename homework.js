@@ -6,32 +6,31 @@ function summation(N) {
     }
     return total;
 }
-//call by summation(5)
+summation(5)
   
   //2
-let numStr = [1, 2, 3, 4, 5];
 
-function summationEven(numStr){
+function summationEven(n){
   let sum = 0;
-  for (let i = 0; i < numStr.length; i++) {
-    if (numStr[i] % 2 === 0) {
-    sum = sum + numStr[i];
+  for (let i = 0; i <=n ; i++) {
+    if (i % 2 === 0) {
+    sum = sum +i;
     }
   }
   return sum;
 }
- 
-console.log(summationEven(numStr));
+summationEven(5)
  
 //3 
-let arr1 = [8, 2, 2, 4]; 
-function Avg(arr1){
-var total = 0;
-for(var i = 0; i < arr1.length; i++) {
-    total += arr1[i];
-var avg = total / arr1.length;
-}
-return avg }
+function avg(n){
+  let total = 0;
+  for(var i in n) {
+      total += n[i];
+  
+  }
+  let avg = total / n.length;
+  return avg }
+  avg([8,2,2,4])
 
 //4 
 function reverse(str) {
@@ -48,21 +47,23 @@ const elements = ['test1', 'test2', 'test3'];
 function addDashes(elements){
 return elements1.join('-');
 }
+
+addDashes(elements)
 //6 *-*
-function countUpAndDownevm()
+const countUpAndDown=function(n)
 { 
-var str = "";
-
- for (var i=1 ; i<=3 ; i++) {
-str+=i;
+let str =' ';
+ for (let i=1 ; i<n ; i++) {
+str+=i+ ' ';
 }
-for(var i=2 ; i>0 ; i--) {
-  str+=i;
+for(let i=n ; i>=1 ; i--) {
+str+=i+ ' ';
+}
+return str;
+return  str + ' ' ;
+}
 
-var arr = str.split('');
-return arr;
-}}
-
+ countUpAndDown(3)
 
 
 //7 D
@@ -70,7 +71,7 @@ var myList = ['cat', 'rabbit', 'dog', 'frog'];
 
 var str = 'a';
 
-function wordsWhithA(myList, str) {
+function wordsWhithA(myList) {
   str = str.split('');
   return myList.filter(function(myList) {
     return str.every(function(char) {
@@ -79,7 +80,7 @@ function wordsWhithA(myList, str) {
   });
 }
 
-const result = wordsWhithA(myList, str); 
+const result = wordsWhithA(myList); 
 console.log(result);
 
 //8 -----D
@@ -87,7 +88,7 @@ var mylist = ['cat', 'rabbit', 'dog', 'frog'];
 
 var s = 'g';
 
-function wordWithLetter(mylist, s) {
+function wordWithLetter(s, mylist) {
   str = s.split('');
   return mylist.filter(function(mylist) {
     return str.every(function(char) {
@@ -96,7 +97,7 @@ function wordWithLetter(mylist, s) {
   });
 }
 
-const theResult1 = wordWithLetter(mylist, s); 
+const theResult1 = wordWithLetter(s,mylist ); 
 console.log(theResult1);
 
 //9
