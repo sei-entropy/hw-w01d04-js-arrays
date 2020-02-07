@@ -13,7 +13,6 @@ console.log('Sum of numebers from 1 to '+ 5 +' is '+ summation(5));
 
 //Q2
 
-
 const summationEven = function (num) {
   let sum=0;
 for (let i = 0; i <= num; i++) {
@@ -21,9 +20,9 @@ for (let i = 0; i <= num; i++) {
           sum += i;
       }
    }
-  return console.log(sum);
+  return sum;
 }
-summationEven(5);
+console.log( summationEven(5)) ;
 
 
  //Q3
@@ -41,6 +40,7 @@ return  Math.floor(count / array.length)
 }
 
 console.log(avg ([8, 4, 2, 4]))
+
 
 //Q4 
 
@@ -90,25 +90,22 @@ printNumbers(3)
 
 //Q7
 
-function find(LetterA){
-  let FindA = 'a';
-  FindA = FindA.split('');
-return LetterA.filter(function(LetterA){
+const find = function (wordsWithLetter,FindA){
+  FindA = 'a'.split('');
+  return wordsWithLetter.filter(function(wordsWithLetter){
 return FindA.every(function(char){
-return LetterA.includes(char);
+  return wordsWithLetter.includes(char);
 });
-});
+  });
 }
-
-console.log(find(['cat', 'rabbit', 'dog', 'frog']));
+const output = find(['cat', 'rabbit', 'dog', 'frog']);
+console.log(output);
 
 
 //Q8
 
-
-function find(wordsWithLetter,Findg){
-  Findg = 'g';
-  Findg = Findg.split('');
+const find = function (wordsWithLetter,Findg){
+  Findg = 'g'.split('');
   return wordsWithLetter.filter(function(wordsWithLetter){
 return Findg.every(function(char){
   return wordsWithLetter.includes(char);
@@ -140,7 +137,7 @@ console.log(longestWord("The cat in the house"));
 
 //Q10
 
-const largestEven = function (arr) {
+const largestEvenNumber = function (arr) {
   const evens = [];
   let biggest = evens;
 
@@ -151,12 +148,12 @@ const largestEven = function (arr) {
   }
   return Math.max(...biggest)
   }    
-  console.log(largestEven([1,2,3,10,4,7,0]));
+  console.log(largestEvenNumber([1,2,3,10,4,7,0]));
 
 
 // Extra 
 
-var wordLetters     = ['G', 'O', 'A', 'T'];
+var wordLetters  = ['G', 'O', 'A', 'T'];
 var guessedLetters  = ['', '', '', ''];
 
 function guessLetter(letter) {
