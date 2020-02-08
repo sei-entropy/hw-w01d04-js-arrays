@@ -24,17 +24,14 @@ const summationEven = function(n) {
 //Create a function to get the average of a group of numbers 
 
 const avg = function(array) {
-    let avg = 0
-    let Length = array.length;
-    let total;
-    for (let i = 0; i < length; i++) {
+    let total = 0;
+    for (let i = 0; i < array.length; i++) {
         total += array[i];
-        avg = total / length;
-        return avg;
+
     }
+    return total / array.length;
+
 }
-
-
 
 
 
@@ -63,28 +60,31 @@ const addDashes = function(array) {
 const countUpAndDown = function(n) {
     const Array = [];
 
+    newArray = [];
+    concat = [];
+
     for (let i = 0; i < n; i++) {
         Array[i] = i + 1;
+        newArray[i] = Array[i];
     }
-    for (let j = Array.length; i < n; i++)
+    Array.reverse();
+    Array.shift();
+    concat = newArray.concat(Array)
 
-
-        console.log(Array)
-
-
+    return concat;
 }
+
 
 //Write a function that will tell you all of the words in an array that contain the letter `a` 
 const wordsWithA = function(array) {
-        for (let i = 0; i <= array.length; i++) {
-            const myArray = [];
-            if (array[i].includes('a'))
-                myArray.push(array[i])
+        let myArray = [];
+        for (let i = 0; i < array.length; i++) {
+
+            if (array[i].includes('a') || (array[i].includes('A')))
+                myArray.push(array[i]);
 
         }
         return myArray;
-
-
 
 
     }
@@ -92,14 +92,13 @@ const wordsWithA = function(array) {
 const wordsWithLetter = function(letter, array) {
 
     let newArray = [];
-    for (let i = 0; i <= array.length; i++) {
-        if (array[i].includes(letter))
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(letter.toLowerCase()) || array[i].includes(letter.toUpperCase()))
             newArray.push(array[i])
 
     }
     return newArray;
 }
-
 
 
 
