@@ -50,7 +50,7 @@ reverse("caterpillar");
 
 //Create a function that takes an array of words and combines them with a dash
 const addDashes = function (arr) {
-    return console.log(arr.join('-'));
+    return arr.join('-');
 
 };
 addDashes(['test1', 'test2', 'test3']);
@@ -62,7 +62,7 @@ const countUpAndDown = function (n) {
         str += i + ' ';
 
     for (let j = n-1; j >= 1 ; j--)
-        str += j + ' ';
+        str += ' ' + j;
 
     return str;
 
@@ -103,9 +103,17 @@ wordsWithLetter("g", ['cat', 'rabbit', 'dog', 'frog']);
 
 //Function that returns the longest word in sentence
 const longestWord = function (str) {
-    let newStr
-//.....
-    return newStr;
+    let newStr = str.split(" ");
+    let longWord = null;
+    let long = 0;
+    newStr.forEach(function(str) {
+        if (long < str.length){
+            long = str.length;
+            longWord = str;
+        }
+        
+    });
+    return longWord;
 
 };
 longestWord("The cat in the house");
